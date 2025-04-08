@@ -1,0 +1,74 @@
+project:
+  name: ML Apprentice Take-Home Project
+  structure:
+    root:
+      - README.md
+      - .gitignore
+      - requirements.txt
+      - environment.yml
+      - pyproject.toml
+      - setup.py
+      - Makefile
+      - Dockerfile
+      - docker-compose.yml
+      - .pre-commit-config.yaml
+      - mlflow_setup.sh
+    config:
+      - config/config.yaml
+      - config/hyperparams.yaml
+      - config/logging.yaml
+      - config/paths.yaml
+    data:
+      raw:
+        - data/raw/.gitkeep
+      processed:
+        - data/processed/.gitkeep
+      outputs:
+        - data/outputs/.gitkeep
+    docs:
+      - docs/training_considerations.md
+      - docs/model_architecture.md
+      - docs/usage.md
+      - docs/inference_demo.md
+    src:
+      model:
+        - src/model/__init__.py
+        - src/model/sentence_encoder.py
+        - src/model/multi_task_model.py
+        - src/model/losses.py
+        - src/model/layers.py
+      train:
+        - src/train/__init__.py
+        - src/train/training_loop.py
+      data:
+        - src/data/__init__.py
+        - src/data/load_data.py
+        - src/data/make_dataset.py
+      inference:
+        - src/inference/__init__.py
+        - src/inference/predict.py
+        - src/inference/api.py
+      utils:
+        - src/utils/__init__.py
+        - src/utils/pooling.py
+        - src/utils/logger.py
+        - src/utils/metrics.py
+        - src/utils/cli.py
+        - src/utils/timer.py
+    scripts:
+      - scripts/run_training.py
+      - scripts/run_inference.py
+      - scripts/visualize.py
+    tests:
+      - tests/__init__.py
+      - tests/test_embeddings.py
+      - tests/test_multitask.py
+      - tests/test_train_loop.py
+      - tests/test_inference.py
+    notebooks:
+      - notebooks/demo_pipeline.ipynb
+      - notebooks/embedding_visualization.ipynb
+    mlruns:
+      - mlruns/.gitkeep
+    logs:
+      - logs/.gitkeep
